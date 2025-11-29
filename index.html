@@ -206,9 +206,11 @@ h1 {
 
     /* Game board manja širina i manje kolone */
     .game-board {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        width: 95vw;
+        display: grid;
+    	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    	gap: 10px;
+    	width: 95vw;
+    	max-width: 800px;
     }
 
     /* Poruka manji font */
@@ -457,6 +459,7 @@ startGame();
 
 </body>
 </html>
+
 
 
 
