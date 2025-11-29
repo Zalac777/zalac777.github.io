@@ -92,17 +92,18 @@ h1 {
 /* ===== Game board ===== */
 .game-board {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* uvijek 4 kolone */
+    grid-template-columns: repeat(4, 1fr); /* 4 kolone stalno */
     gap: 15px;
-    width: min(90vw, 90vh); /* zauzima maksimalno prostor ekrana */
-    max-width: 800px;       /* ograničenje na desktopu */
+    width: min(90vw, 90vh); /* automatsko skaliranje */
+    max-width: 800px;
     margin-bottom: 30px;
 }
 
-/* ===== Kartice ===== */
 .card {
-    width: 100%;          /* zauzima širinu kolone */
-    aspect-ratio: 1 / 1;  /* kvadratne kartice */
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 150%; /* pravokutni oblik */
     perspective: 1000px;
 }
 
@@ -454,6 +455,7 @@ startGame();
 
 </body>
 </html>
+
 
 
 
